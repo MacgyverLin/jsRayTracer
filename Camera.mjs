@@ -1,5 +1,5 @@
-import {gl} from "./global.mjs"
-import {Graphics} from "./Graphics.mjs"
+import { gl } from "./global.mjs"
+import { Graphics } from "./Graphics.mjs"
 
 export class Camera extends Graphics {
   constructor() {
@@ -15,8 +15,8 @@ export class Camera extends Graphics {
     this.enableDepthTest = true;
     this.depthFunc = gl.LEQUAL;
 
-    this.fov = 30;
-    this.aspect = 1.0;
+    this.fov = 90;
+    this.aspect = 100.0 / 100.0;
     this.zNear = 1.0;
     this.zFar = 1000.0;
     this.projectionMatrix = mat4.create();
@@ -49,7 +49,7 @@ export class Camera extends Graphics {
     this.validateProjection();
 
     return this.projectionMatrix;
-  }  
+  }
 
   setViewport(viewport) {
     this.viewport = viewport;

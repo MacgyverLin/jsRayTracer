@@ -16,9 +16,9 @@ export class Graphics {
   validate() {
     if (!this.transformValid) {
       this.worldTransform = mat4.create();
-      mat4.translate(this.worldTransform, this.worldTransform, [-0.0, 0.0, -6.0]);
-      mat4.rotate(this.worldTransform, this.worldTransform, this.rotation, [0, 0, 1]);
-      mat4.rotate(this.worldTransform, this.worldTransform, this.rotation * .7, [0, 1, 0]);
+      mat4.translate(this.worldTransform, this.worldTransform, [-0.0, 0.0, -1.0]);
+      //mat4.rotate(this.worldTransform, this.worldTransform, this.rotation, [0, 0, 1]);
+      //mat4.rotate(this.worldTransform, this.worldTransform, this.rotation * .7, [0, 1, 0]);
 
       mat4.invert(this.inverseWorldTransform, this.worldTransform);
       mat4.transpose(this.inverseWorldTransform, this.inverseWorldTransform);

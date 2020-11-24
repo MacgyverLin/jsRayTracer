@@ -34,6 +34,6 @@ export class Mesh extends Graphics {
     this.texture.update();
     this.texture.bind(0);
 
-    this.vertexIndexBuffer.draw(36, 0);
+    this.vertexIndexBuffer.draw(6, 0);
   }
 }

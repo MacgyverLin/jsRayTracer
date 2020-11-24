@@ -5,11 +5,11 @@ import {RayTracer} from "./RayTracer.mjs"
 export class RayTraceTexture extends Texture2D {
   constructor() {
     super();
-    this.rayTracer = new RayTracer(200, 100);
+    this.rayTracer = new RayTracer();
   }
 
   update() {
     this.rayTracer.render();
-    super.update1(this.rayTracer.getWidth(), this.rayTracer.getHeight(), this.rayTracer.getBuffer());
+    super.update1(200, 100, this.rayTracer.buffer);
   }
 }
